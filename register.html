@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kiwi+Maru:wght@500&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: 'Kiwi Maru', serif;
+      background-color: black;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .register-form {
+      background-color: white;
+
+    }
+
+    /* Add padding to containers */
+    .container {
+      padding: 16px;
+      background-color: white;
+      padding-top: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    /* Full-width input fields */
+    input[type=tel],
+    input[type=text],
+    input[type=password],
+    select {
+      width: 100%;
+      height: 45px;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+      border: 1px black solid;
+      padding: 5px;
+    }
+
+    input[type=tel]:focus,
+    input[type=text]:focus,
+    input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    /* Set a style for the submit button */
+    .registerbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .registerbtn:hover {
+      opacity: 1;
+    }
+
+    /* Add a blue text color to links */
+    a {
+      color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+
+    #alert-heading {
+      margin: 0;
+      font-family: "Lato", sans-serif;
+      color: #cc561e;
+    }
+  </style>
+</head>
+
+<body>
+  <!--    NAVIGATION BAR-->
+  <section id='nav-bar'>
+    <nav style="background-color: #2f6c68;" class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="index.html"
+        style="font-family: 'Kiwi Maru', serif; font-size: 2vw; color: white">HOMESTAY</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color: white"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav" id="myLinks">
+          <a class="nav-item nav-link" href="#">Place</a>
+          <a class="nav-item nav-link" href="#">About</a>
+          <a class="nav-item nav-link" href="#">Contact</a>
+          <a class="nav-item nav-link" href="register.html">Register</a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!--    REGISTER FORM-->
+  <section id='register'>
+    <form>
+      <div class="container register-form">
+        <h1 style='text-align: center;'>Register</h1>
+        <p style='text-align: center;'>Please fill in this form to create an account.</p>
+        <hr>
+
+        <!-- xung ho -->
+        <div class='row'>
+          <div class='col-sm-2' style="float: left;">
+            <label for="xungho"><b>Title:</b></label>
+            <select id="xungho" name="xungho" required>
+              <option value="mr">Mr.</option>
+              <option value="mrs">Mrs.</option>
+              <option value="miss">Miss</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- enter name -->
+        <div class='row'>
+          <div class='col-sm-6'>
+            <label for="first-name"><b>First Name:</b></label>
+            <input type="text" name="first-name" id="first-name" required>
+          </div>
+
+          <div class='col-sm-6'>
+            <label for="last-name"><b>Last Name:</b></label>
+            <input type="text" name="last-name" id="last-name" required>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-sm-6'>
+            <div id="output-warning-name"></div>
+          </div>
+        </div>
+
+        <!-- user & password -->
+        <div class='row'>
+          <div class='col-sm-6'>
+            <label for="user-name"><b>Username:</b></label>
+            <input type="text" name="user-name" id="user-name" required>
+          </div>
+
+          <div class='col-sm-6'>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" name="psw" id="psw" required>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-sm-6'>
+            <div id="output-warning-username"></div>
+          </div>
+
+          <div class='col-sm-6'>
+            <div id="output-warning-password"></div>
+          </div>
+        </div>
+
+        <!-- enter email -->
+        <div class='row'>
+          <div class='col-sm-6'>
+            <label for="email"><b>Email:</b></label>
+            <input type="text" name="email" id="email" required>
+          </div>
+
+          <div class='col-sm-6'>
+            <label for="confirm-email"><b>Confirm Password:</b></label>
+            <input type="password" name="confirm-password" id="confirm-password" required>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-sm-6'>
+            <div id="output-warning-email"></div>
+          </div>
+
+          <div class='col-sm-6'>
+            <div id="output-warning-confirm-password"></div>
+          </div>
+        </div>
+
+        <!-- user's location -->
+        <div class='row'>
+          <div class='col-sm-6'>
+            <label for="city"><b>City of Residence:</b></label>
+            <input type="text" name="city" id="city" required>
+          </div>
+
+          <div class='col-sm-6'>
+            <label for="country"><b>Country of Residence:</b></label>
+            <select id="country" name="country" required>
+              <option value="vietnam">Vietnam</option>
+              <option value="thai">Thailand</option>
+              <option value="lao">Laos</option>
+            </select>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-sm-6'>
+            <div id="output-warning-city"></div>
+          </div>
+        </div>
+        <!-- mobile phone -->
+        <div class='row'>
+          <div class='col-sm-6'>
+            <label for="phone"><b>Phone number</b></label>
+            <input type="tel" name="phone" id="phone" placeholder="123-456-7890" required>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-sm-6'>
+            <div id="output-warning-phone"></div>
+          </div>
+        </div>
+
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <button type="submit" class="registerbtn">Register</button>
+
+        <div class="container signin">
+          <p>Already have an account? <a href="#">Sign in</a>.</p>
+        </div>
+      </div>
+    </form>
+  </section>
+</body>
+
+<script>
+  console.log('JavaScript Register')
+
+  
+
+  function registerButton() {
+    var first_name = document.getElementById('first-name')
+    var last_name = document.getElementById('last-name')
+    var user_name = document.getElementById('user-name')
+    var password = document.getElementById('psw')
+    var email = document.getElementById('email')
+    var confirm_password = document.getElementById('confirm-password')
+    var city = document.getElementById('city')
+    var phone = document.getElementById('phone')
+
+    // Validator
+
+    //Name
+    var regex_name_city = /^[\\p{L} .'-]+$/;
+    // Phone
+    var regex_phone = /^[1-9]\d{2}\s\d{3}\s\d{4}/;
+    //User name
+    var regex_username = /^[A-Za-z]\\w{5, 29}$"/
+    //Password
+    var regex_pass = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?]).{8,32}$/
+    //email
+    var regex_email = /\S+@\S+\.\S+/
+
+    //Validate name
+    if (first_name.value.match(regex_name_city) && last_name.value.match(regex_name_city)) {
+      var outputWarning = document.getElementById('output-warning-name');
+      console.log('Name:', first_name.value, last_name.value)
+      outputWarning.innerHTML = "";
+    } else {
+      var newAlertText = document.createElement('h3')
+      newAlertText.setAttribute('id', 'alert-heading')
+
+      var newText = document.createTextNode('The name is invalid. Please fill character only');
+      var outputWarning = document.getElementById('output-warning-name');
+
+      first_name.style.border = 'solid 3px #e84545';
+
+      newAlertText.appendChild(newText);
+      if (outputWarning.innerHTML === "") {
+        outputWarning.appendChild(newAlertText);
+      } else {
+        outputWarning.innerHTML = "";
+        outputWarning.appendChild(newAlertText);
+      }
+    }
+
+    //Validate User name
+    if (user_name.value.match(regex_username)) {
+      var outputWarning = document.getElementById('output-warning-username');
+      outputWarning.innerHTML = "";
+      console.log('Username:', user_name.value)
+    } else {
+      var newAlertText = document.createElement('h3')
+      newAlertText.setAttribute('id', 'alert-heading')
+
+      var newText = document.createTextNode('Username must: \n -Consists of 6 to 30 characters -Only contain alphanumeric characters and underscores \n - The first character of the username must be an alphabetic character');
+      var outputWarning = document.getElementById('output-warning-username');
+
+      first_name.style.border = 'solid 3px #e84545';
+
+      newAlertText.appendChild(newText);
+      if (outputWarning.innerHTML === "") {
+        outputWarning.appendChild(newAlertText);
+      } else {
+        outputWarning.innerHTML = "";
+        outputWarning.appendChild(newAlertText);
+      }
+    }
+
+    //Validate password
+    if (password.value.match(regex_pass)) {
+      var outputWarning = document.getElementById('output-warning-password');
+      outputWarning.innerHTML = "";
+      console.log('Password:', password.value)
+    } else {
+      var newAlertText = document.createElement('h3')
+      newAlertText.setAttribute('id', 'alert-heading')
+
+      var newText = document.createTextNode('Password must include: \n - At least one digit, \n - One lowercase character, \n - One uppercase character [A-Z] \n - One special character [*.!@#$%^&(){}[]:;<>,.?], \n - 8 <= number of character <= 32');
+      var outputWarning = document.getElementById('output-warning-password');
+
+      first_name.style.border = 'solid 3px #e84545';
+
+      newAlertText.appendChild(newText);
+      if (outputWarning.innerHTML === "") {
+        outputWarning.appendChild(newAlertText);
+      } else {
+        outputWarning.innerHTML = "";
+        outputWarning.appendChild(newAlertText);
+      }
+    }
+
+    //Validate email
+    if (email.value.match(regex_email)) {
+      var outputWarning = document.getElementById('output-warning-email');
+      outputWarning.innerHTML = "";
+      console.log('Email:', email.value)
+    } else {
+      var newAlertText = document.createElement('h3')
+      newAlertText.setAttribute('id', 'alert-heading')
+
+      var newText = document.createTextNode('Email must in form: anystring@anystring.anystring');
+      var outputWarning = document.getElementById('output-warning-email');
+
+      first_name.style.border = 'solid 3px #e84545';
+
+      newAlertText.appendChild(newText);
+      if (outputWarning.innerHTML === "") {
+        outputWarning.appendChild(newAlertText);
+      } else {
+        outputWarning.innerHTML = "";
+        outputWarning.appendChild(newAlertText);
+      }
+    }
+
+    //Log to console city
+    console.log(city.value)
+    //Validate phone 
+    if (phone.value.match(regex_phone)) {
+      var outputWarning = document.getElementById('output-warning-phone');
+      outputWarning.innerHTML = "";
+      console.log('Phone:', phone.value)
+    } else {
+      var newAlertText = document.createElement('h3')
+      newAlertText.setAttribute('id', 'alert-heading')
+
+      var newText = document.createTextNode('Must be a number with format ### ### ####');
+      var outputWarning = document.getElementById('output-warning-phone');
+
+      first_name.style.border = 'solid 3px #e84545';
+
+      newAlertText.appendChild(newText);
+      if (outputWarning.innerHTML === "") {
+        outputWarning.appendChild(newAlertText);
+      } else {
+        outputWarning.innerHTML = "";
+        outputWarning.appendChild(newAlertText);
+      }
+    }
+
+  }
+</script>
+
+</html>

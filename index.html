@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+	<title>Homepage</title>
+	<!-- Import Boostrap css, js-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="images/456.jpg" rel="icon">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+
+</head>
+<body >
+    <header class="header">
+        <div class="sticky">
+            <section id='nav-bar'>
+                <nav style="background-color: #2f6c68;" class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#" style="font-family: 'Kiwi Maru', serif; font-size: 2vw; color: white">HOMESTAY</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon" style="color: white"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav" id = "myLinks">
+                      <a class="nav-item nav-link" href="search.html">Place</a>
+                    <a class="nav-item nav-link" href="#">About</a>
+                    <a class="nav-item nav-link" href="#">Contact</a>
+                    <a class="nav-item nav-link" href="register.html">Register</a>
+                  </div>
+                </div>
+            </nav>
+            </section>
+        </div>
+
+    </header>
+
+<!-- Carousel -->
+<div >
+    <table style="width: 100%;" class="slider1">
+        
+            
+                <div id="slides" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#slides" data-slide-to="0" class="active"></li>
+                        <li data-target="#slides" data-slide-to="1"></li>
+                        <li data-target="#slides" data-slide-to="2"></li>		
+                        <li data-target="#slides" data-slide-to="3"></li>
+                        <li data-target="#slides" data-slide-to="4"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/1986.jpg"height="600">               
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/D-green.jpg"height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/Nắng.jpg"height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/OPA.jpg"height="600">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/Sleepingwood.jpg"height="600">
+                        </div>
+                    </div>
+                    
+                </div>
+    </table>
+</div>
+<hr>
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <form class="form">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Enter phone numbers or name" name="name" required>
+                                <span class="form-label">Name of homestay</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <select class="form-control" name="guests">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                                <span class="form-label">Guests</span>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <select class="form-control" name="children">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                                <span class="form-label">Children</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input class="form-control" type="date" required name="check-in">
+                                <span class="form-label">Check In</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <input class="form-control" type="date" required name="check-out">
+                                <span class="form-label">Check out</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-btn">
+
+                                <button class="submit-btn" id="submit" onclick="moveButton()">Check availability</button>
+                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr> 
+<section class="homestay_service service_2 pt__90 pb__100 pt__sm__70 pb__sm__40 bg__gray" id="services">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="homestay_title pb__70 text__center">
+                        <span class="heading" style='font-size: 2vw; padding: 10px; padding-top: 15px'>Our Service</span>
+                        <span class="sub-heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ea, aut consectetur voluptatum esse dolor maxime quaerat ipsa aliquid dolorem. Officia quo vel corrupti et aspernatur itaque sunt ipsum necessitatibus.</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="homestay_service_block transition text-center mb__30">
+                        <i class="fa fa-crop "></i>
+                        <h4>FAST & EASY BOOKING</h4>
+                        <p>Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially reasonable off one.</p>
+                    </div>
+                    <!-- service block end -->
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="homestay_service_block transition text-center mb__30">
+                        <i class="fa fa-laptop "></i>
+                        <h4>HOTELS & ROOMS</h4>
+                        <p>Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially reasonable off one.</p>
+                    </div>
+                    <!-- service block end -->
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="homestay_service_block transition text-center mb__30">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                        <h4>THE BEST LOCATIONS</h4>
+                        <p>Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially reasonable off one.</p>
+                    </div>
+                    <!-- service block end -->
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="homestay_service_block transition text-center">
+                        <i class="fa fa-bicycle "></i>
+                        <h4>GREAT PRICES</h4>
+                        <p>Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially reasonable off one.</p>
+                    </div>
+                    <!-- service block end -->
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="homestay_service_block transition text-center">
+                        <i class="fa fa-heart"></i>
+                        <h4>PARKING AREA</h4>
+                        <p>Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially reasonable off one.</p>
+                    </div>
+                    <!-- service block end -->
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="homestay_service_block transition text-center">
+                        <i class="fa fa-gamepad "></i>
+                        <h4>SECURITY</h4>
+                        <p>Unpacked now declared put you confined daughter improved. Celebrated imprudence few interested especially reasonable off one.</p>
+                    </div>
+                    <!-- service block end -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+
+<hr> 
+<section class="districts1">
+    <div class="container">
+        <h5 class="section-head">
+            <span class="heading">Explore</span>
+            <span class="sub-heading">Our city</span>
+        </h5>
+        <div class="grid">
+            <div class="grid-item featured-districts">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/C%E1%BA%A7u_R%E1%BB%93ng.jpg" alt="" class="districts" href="#">
+                <h5 class="districts-name">Hai Chau</h5>
+                <a href="#" class="btn btn-gradient">See now</a>
+
+            </div>
+            <div class="grid-item featured-districts">
+                <img src="https://camle.danang.gov.vn/documents/10184/55713/3_cau.jpg/2509cbc6-4ccf-4f7a-9b3e-8141a1246a9b?version=1.1&t=1508904512000&imageThumbnail=0" alt="" class="hotel-image" href="#">
+                <h5 class="districts-name">Cam Le</h5>  
+                <a href="#" class="btn btn-gradient">See now</a>
+
+            </div>
+            <div class="grid-item featured-districts">
+                <img src="https://baodanang.vn/dataimages/201610/original/images1303983_DSTK_1.jpg" alt="" class="districts" href="#">
+                <h5 class="districts-name">Thanh Khe</h5>
+                <a href="#" class="btn btn-gradient">See now</a>
+
+            </div>
+            <div class="grid-item featured-districts">
+                <img src="https://znews-photo.zadn.vn/w480/Uploaded/jugtzb/2014_12_22/1.jpg" alt="" class="districts" href="#">
+                <h5 class="districts-name">Lien Chieu</h5>
+                <a href="#" class="btn btn-gradient">See now</a>
+
+            </div>
+            <div class="grid-item featured-districts">
+                <img src="https://saigonstartravel.com/wp-content/uploads/2018/11/chua-linh-ung.jpg" alt="" class="districts" href="#">
+                <h5 class="districts-name">Ngu Hanh Son</h5>
+                <a href="#" class="btn btn-gradient">See now</a>
+
+            </div>
+            <div class="grid-item featured-districts">
+                <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/07/bandaosontra1.jpg" alt="" class="hotel-image" href="#">
+                <h5 class="districts-name">Son Tra</h5>
+                <a href="#" class="btn btn-gradient">See now</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container-fluid padding">	
+    <div class="container">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2>Contact us</h2>
+            </div>
+            <div class="col-12 social padding">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>	
+</div>
+	
+<footer>
+    <div class="container">
+        <div class="container-fluid padding">	
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <img src="images/456.jpg" height="55" width="150">
+                    <hr class="light">
+                    <p>0905123456</p>
+                    <p>booking@gmail.com</p>
+                    <p>158A Le Loi Da Nang</p>
+                </div>
+                <div class="col-md-4">				
+                    <hr class="light">
+                    <h5>Working hours</h5>
+                    <hr class="light">
+                    <p>Monday-Friday: 8am - 5pm</p>
+                    <p>Weekend: 8am - 12am</p>
+                </div>
+                <div class="col-md-4">				
+                    <hr class="light">
+                    <h5>Services</h5>
+                    <hr class="light">
+                    <p>Booking</p>
+                </div>
+                <div class="col-12">
+                    <hr class="light-100">
+                    <h5>&copy; Booking</h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+	
+</footer>
+<script>
+    let header=document.querySelector('.header')
+    window.addEventListener('scroll',function(){
+        let windownPosition = window.scrollY >0;
+        header.classList.toggle("active", windownPosition)
+    })
+    
+</script>
+<script>
+    document.querySelector('form.form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let x = document.querySelector('form.form').elements;
+  console.log("Name of homestay: ", x['name'].value);
+  console.log("Time check in: ", x['check-in'].value);
+  console.log("Time check out: ", x['check-out'].value);
+  console.log("Guests: ", x['guests'].value);
+  console.log("Children: ", x['children'].value);
+
+});
+</script>
+</body>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+

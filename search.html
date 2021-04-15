@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Place</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css" />
+    
+<!--    Link font family-->
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>   
+    
+</head>
+
+<body>
+    <!--    NAVIGATION BAR-->
+    <section id='nav-bar'>
+        <nav style="background-color: #2f6c68;" class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html" style="font-family: 'Kiwi Maru', serif; font-size: 2vw; color: white">HOMESTAY</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="color: white"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav" id = "myLinks">
+              <a class="nav-item nav-link" href="search.html">Place</a>
+            <a class="nav-item nav-link" href="#">About</a>
+            <a class="nav-item nav-link" href="#">Contact</a>
+            <a class="nav-item nav-link" href="register.html">Register</a>
+          </div>
+        </div>
+    </nav>
+    </section>
+
+    <!--    BANNER -->
+    <section id='banner'>
+        <div class="container-fluid banner">
+            <img id='image-panner' src="panner.jpg" alt="Homestay">
+            <!-- <span id='text-banner'>WHERE TO GO</span> -->
+        </div>  
+    </section>
+
+    <br>
+
+    <!-- SEARCH BAR -->
+    <section id='body-context'>
+        <!-- SEARCH BAR -->
+        <div class="container float-left search-bar">
+            <form id='search-form'>
+                <!-- PRICE -->
+                <div id='price-form'>
+                    <label for="defaultRange" class="main-label">Price</label>
+                    <br>
+                    <input type="range" id="defaultRange">
+                </div>
+
+                <!-- AREA -->
+                <div id='area-form'>
+                    <label class='main-label'>Area</label>
+                    <div class='row' id='row-1'>
+                        <div class='col-sm-6'>
+                            <div class="custom-control custom-radio
+                                    custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio1" name="example1">
+                                <label class="custom-control-label" for="customRadio1">Son Tra</label>
+                            </div>
+                        </div>
+
+                        <div class='col-sm-6'>
+                            <div class="custom-control custom-radio
+                                    custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio2" name="example2">
+                                <label class="custom-control-label" for="customRadio2">Hai Chau</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row' id='row-2'>
+                        <div class='col-sm-6'>
+                            <div class="custom-control custom-radio
+                                    custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio4" name="example4">
+                                <label class="custom-control-label" for="customRadio4">Lien Chieu</label>
+                            </div>
+                        </div>
+
+                        <div class='col-sm-6'>
+                            <div class="custom-control custom-radio
+                                    custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio5" name="example5">
+                                <label class="custom-control-label" for="customRadio5">Son Tra</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row' id='row-3'>
+                        <div class='col-sm-6'>
+                            <div class="custom-control custom-radio
+                                    custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio3" name="example3">
+                                <label class="custom-control-label" for="customRadio3">Ngu Hanh Son</label>
+                            </div>
+                        </div>
+
+                        <div class='col-sm-6'>
+                            <div class="custom-control custom-radio
+                                    custom-control-inline">
+                                <input type="radio" class="custom-control-input" id="customRadio6" name="example6">
+                                <label class="custom-control-label" for="customRadio6">Thanh Khe</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <!-- TIEN ICH -->
+                <div id="FACILITY">
+                    <label class='main-label'>Facility</label>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="parking-checkbox">
+                        <label class="custom-control-label" for="parking-checkbox">Parking</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="breakfast-checkbox">
+                        <label class="custom-control-label" for="breakfast-checkbox">Breakfast</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="pet-checkbox">
+                        <label class="custom-control-label" for="pet-checkbox">Lovely pet</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="pool-checkbox">
+                        <label class="custom-control-label" for="pool-checkbox">Swimming pool</label>
+                    </div>
+
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="garden-checkbox">
+                        <label class="custom-control-label" for="garden-checkbox">Garden</label>
+                    </div>
+                </div>
+
+                <br>
+                <button type="submit" class='btn-search' id='btn-search'>search</button>
+            </form>
+        </div>
+
+        <!-- HOMESTAY INFOR -->
+        <div class="container float-right homestay-container">
+            <div class="container homestay-container-1">
+                <div class='row'>
+                    <div class='col-sm-6'>
+                        <img class='homestay-image' src='homestay1.jpg' alt='Sleepingwood'>
+                        <span class='price-infor'>10$/night</span>
+                    </div>
+
+                    <div class='col-sm-6 text-infor'>
+                        <h4 class='name'>Nang homestay</h4>
+
+                        <div class='rating'>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+
+                        <div class='address-infor'>
+                            <i class='fa fa-home'></i>
+                            <span>somewhere on the Earth</span>
+                        </div>
+                        
+
+                        <div class='facility-infor'>
+                            <span>parking</span>
+                            <span>breakfast</span>
+                            <span>lovely pet</span>
+                        </div>
+                        <br>
+                        <a href = 'homestay.html' target="_blank">
+                            <button class='btn-booking'>Booking now</button>
+                        </a>
+                        
+                    </div>
+                </div>                
+            </div>
+
+            <div class="container homestay-container-1">
+                <div class='row'>
+                    <div class='col-sm-6'>
+                        <img class='homestay-image' src='homestay2.jpg' alt='Sleepingwood'>
+                        <span class='price-infor'>10$/night</span>
+                    </div>
+
+                    <div class='col-sm-6 text-infor'>
+                        <h4 class='name'>Hai Dang homestay</h4>
+
+                        <div class='rating'>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+
+                        <div class='address-infor'>
+                            <i class='fa fa-home'></i>
+                            <span>somewhere on the Earth</span>
+                        </div>
+                        
+
+                        <div class='facility-infor'>
+                            <span>parking</span>
+                            <span>breakfast</span>
+                            <span>lovely pet</span>
+                        </div>
+                        <br>
+                        <button class='btn-booking'>Booking now</button>
+                    </div>
+                </div>                
+            </div>
+            
+            <div class="container homestay-container-1">
+                <div class='row'>
+                    <div class='col-sm-6'>
+                        <img class='homestay-image' src='homestay3.jpg' alt='Sleepingwood'>
+                        <span class='price-infor'>10$/night</span>
+                    </div>
+
+                    <div class='col-sm-6 text-infor'>
+                        <h4 class='name'>Hog co Xinh homestay</h4>
+
+                        <div class='rating'>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+
+                        <div class='address-infor'>
+                            <i class='fa fa-home'></i>
+                            <span>somewhere on the Earth</span>
+                        </div>
+                        
+
+                        <div class='facility-infor'>
+                            <span>parking</span>
+                            <span>breakfast</span>
+                            <span>lovely pet</span>
+                        </div>
+                        <br>
+                        <button class='btn-booking'>Booking now</button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section> 
+</body>
+
+</html>

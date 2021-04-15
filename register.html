@@ -244,7 +244,7 @@
 
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
-        <button type="submit" class="registerbtn">Register</button>
+        <button type="submit" class="registerbtn" id = 'submit-btn'>Register</button>
 
         <div class="container signin">
           <p>Already have an account? <a href="#">Sign in</a>.</p>
@@ -257,7 +257,8 @@
 <script>
   console.log('JavaScript Register')
 
-  
+  var button = document.getElementById('submit-btn');
+  button.addEventListener('click', registerButton)
 
   function registerButton() {
     var first_name = document.getElementById('first-name')
